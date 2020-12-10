@@ -125,7 +125,19 @@ export default {
 .shop-middle-right .better-more span {
   background-color: #f13e3a;
 }
-/* .shop-bottom{
-  color: #5ea732;
-} */
+.shop-bottom{
+  text-align: center;
+ 
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  background:#ccc;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  margin-left: -65px;
+  top: 10px;
+  color: #000;
+}
+
 </style>
