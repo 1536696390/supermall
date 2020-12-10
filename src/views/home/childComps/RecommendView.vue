@@ -2,7 +2,7 @@
   <div class="recommend">
     <div v-for="item in recommends" :key="item.num" class="recommend-item">
       <a :href="item.link">
-        <img :src="item.image" alt="" />
+        <img :src="item.image" alt="" @load="imageLoad" />
         <div>{{ item.title }}</div>
       </a>
     </div>
@@ -18,7 +18,23 @@ export default {
         return []
       }
     }
+  },
+  data() {
+    return {
+      isLoad: false
+    }
+  },
+  methods: {
+    imageLoad() {
+      if (!this.isLoad) {
+        this.$emit('viewImageLoad')
+        this.isLoad = true
+      }
+
+    }
   }
+
+
 }
 </script>
 
